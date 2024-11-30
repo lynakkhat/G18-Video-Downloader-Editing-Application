@@ -598,14 +598,14 @@ def cut_audio():
     cut_window.attributes('-fullscreen', True)  
 
     ttk.Label(cut_window, text="", background="#333333").pack(pady=130)
-    ttk.Label(cut_window, text="Select Video Source", font=("Helvetica", 18, "bold"), foreground="white", background="#333333").pack()
+    ttk.Label(cut_window, text="Select Video Source", font=("Helvetica", 38, "bold"), foreground="white", background="#333333").pack()
     ttk.Label(cut_window, text="", background="#333333").pack(pady=15)
 
     style = ttkb.Style()
     style.configure("info.TButton",font=("Helvetica", 16, "bold"), padding=(0, 10))  
 
-    ttk.Button(cut_window, text="Cut Audio of Audio", bootstyle=INFO, command=lambda: handle_cut_audio(), width=40, style="info.TButton").pack(pady=15)
-    ttk.Button(cut_window, text="Cut Audio of Vidio", bootstyle=INFO, command=lambda: handle_cut_video(), width=40, style="info.TButton").pack(pady=15)
+    ttk.Button(cut_window, text="Cut Audio", bootstyle=INFO, command=lambda: handle_cut_audio(), width=40, style="info.TButton").pack(pady=15)
+    ttk.Button(cut_window, text="Cut Video", bootstyle=INFO, command=lambda: handle_cut_video(), width=40, style="info.TButton").pack(pady=15)
     ttk.Button(cut_window, text="Back", bootstyle=DANGER, command=lambda: [cut_window.destroy(), root.deiconify()], width=20, style="danger.TButton").pack(pady=30)
 
 
@@ -968,7 +968,7 @@ ttk.Button(menu_frame, text="Download Video", bootstyle=PRIMARY, command=downloa
 ttk.Button(menu_frame, text="Download Audio", bootstyle=PRIMARY, command=download_audio_window, width=50, style="primary.TButton").pack(pady=30, fill=X)
 ttk.Button(menu_frame, text="Download Playlist", bootstyle=PRIMARY, command=download_playlist_window, width=50, style="primary.TButton").pack(pady=30, fill=X)
 ttk.Button(menu_frame, text="Extract Image", bootstyle=PRIMARY, command=extract_images_window, width=50, style="primary.TButton").pack(pady=30, fill=X)
-ttk.Button(menu_frame, text="Cut Audio", bootstyle=PRIMARY, command=cut_audio, width=50, style="primary.TButton").pack(pady=30, fill=X)
+ttk.Button(menu_frame, text="Cutter Tool", bootstyle=PRIMARY, command=cut_audio, width=50, style="primary.TButton").pack(pady=30, fill=X)
 
 ttk.Button(root, text="Exit", bootstyle=DANGER, command=exit_app, width=30, style="danger.TButton").pack(pady=30)
 
